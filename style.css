@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+.sliderContainer{
+    position: relative;
+    width: 900px;
+    height: 700px;
+    overflow-x: hidden;
+    border: 10px solid #fff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sliderContainer img{
+    max-width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.sliderContainer img.active{
+    opacity: 1;
+}
+
+.sliderContainer .arrows{
+    position: absolute;
+    bottom: 0; right: 0;
+    display: flex;
+    gap: 1rem;
+    background: rgba(255,255,255,0.4);
+    z-index: 999999;
+}
+
+.sliderContainer .arrows .arrow{
+    cursor: pointer;
+}
+
+.sliderContainer .arrows i{
+    font-size: 3rem;
+    color: rgba(255,255,255,0.8);
+}   
+
+.sliderContainer .textBx{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    backdrop-filter: blur(20px);
+}
+
+.sliderContainer .textBx .text{
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
